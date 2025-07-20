@@ -236,6 +236,16 @@ docker push <dockerhub_username>/<dockerhub_repo>:v1.0.1
 
 ---
 
+## 10. Resource clean-up
+
+   ```bash
+   kubectl delete deploy demo -n demo
+   kubectl delete namespace demo
+   kind delete cluster --name demo
+   ```
+
+---
+
 ## Next Steps
 
 - Automate builds & deploys with CI/CD (GitHub Actions, GitLab CI, etc.)  
