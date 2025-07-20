@@ -228,6 +228,12 @@ docker push <dockerhub_username>/<dockerhub_repo>:v1.0.1
    kubectl rollout status deployment/demo -n demo
    kubectl get pods -n demo -o wide
    ```
+5. **Push hot fix changes to Github**  
+   ```bash
+   git add .
+   git commit -m "Hotfix Remove broken svg frame1"
+   git tag v1.0.1-hotfix.1
+   ```
 
 ---
 
