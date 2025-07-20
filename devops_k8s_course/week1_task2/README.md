@@ -200,6 +200,43 @@ docker push <dockerhub_username>/<dockerhub_repo>:v1.0.1
 
 ---
 
+---
+
+## 9. Hotfix flow
+
+1. **Create and switch to new brach for hot fix**  
+   ```bash
+   git checkout -b hot-fix-week1-task2 v1.0.1
+   ```
+2. **Build hot fix image**  
+   ```bash
+   docker build -t <dockerhub_username>/<dockerhub_repo>:v1.0.1-hotfix.1 .
+   ```
+3. **Switch to v1.0.1-hotfix.1**  
+   ```bash
+   kubectl set image deployment/demo \
+     devops-k8s=<dockerhub_username>/<dockerhub_repo>:v1.0.1-hotfix.1 \
+     -n demo
+
+   # Re-establish port-forward
+   kubectl port-forward deploy/demo 8080:8080 -n demo
+   ```
+   > Here, `devops-k8s` is the container name in your Deployment spec.
+
+4. **Verify the new rollout**  
+   ```bash
+   kubectl rollout status deployment/demo -n demo
+   kubectl get pods -n demo -o wide
+   ```
+5. **Push hot fix changes to Github**  
+   ```bash
+   git add .
+   git commit -m "Hotfix Remove broken svg frame1"
+   git tag v1.0.1-hotfix.1
+   ```
+
+---
+
 ## Next Steps
 
 - Automate builds & deploys with CI/CD (GitHub Actions, GitLab CI, etc.)  
