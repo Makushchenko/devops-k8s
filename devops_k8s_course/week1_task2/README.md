@@ -200,8 +200,6 @@ docker push <dockerhub_username>/<dockerhub_repo>:v1.0.1
 
 ---
 
----
-
 ## 9. Hotfix flow
 
 1. **Create and switch to new brach for hot fix**  
@@ -233,6 +231,7 @@ docker push <dockerhub_username>/<dockerhub_repo>:v1.0.1
    git add .
    git commit -m "Hotfix Remove broken svg frame1"
    git tag v1.0.1-hotfix.1
+   git push origin v1.0.1-hotfix.1
    ```
 
 ---
