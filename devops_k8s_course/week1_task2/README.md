@@ -8,7 +8,11 @@ This guide shows you how to:
 4. Install **kind** (Kubernetes in Docker)  
 5. Create a local cluster  
 6. Deploy your app  
-7. Roll out a new version with Blue/Green deployment
+7. Roll Out a New Version (v1.0.1)
+8. Blue/Green Deployment
+9. Hotfix flow
+10. Resource clean-up
+11. Install **k9s** is a terminal based UI to interact with your Kubernetes clusters
 
 ---
 
@@ -242,6 +246,14 @@ docker push <dockerhub_username>/<dockerhub_repo>:v1.0.1
    kubectl delete deploy demo -n demo
    kubectl delete namespace demo
    kind delete cluster --name demo
+   ```
+
+---
+
+## 11. Install **k9s** is a terminal based UI to interact with your Kubernetes clusters
+
+   ```bash
+   sudo wget https://github.com/derailed/k9s/releases/latest/download/k9s_linux_amd64.deb && sudo apt install ./k9s_linux_amd64.deb && sudo rm k9s_linux_amd64.deb
    ```
 
 ---
