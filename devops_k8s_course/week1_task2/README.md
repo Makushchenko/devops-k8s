@@ -251,7 +251,7 @@ docker push <dockerhub_username>/<dockerhub_repo>:v1.0.1
 
 ---
 
-## 11. Install **k9s** is a terminal based UI to interact with your Kubernetes clusters
+## 11. Install ***k9s*** is a terminal based UI to interact with your Kubernetes clusters
 
    ```bash
    sudo wget https://github.com/derailed/k9s/releases/latest/download/k9s_linux_amd64.deb && sudo apt install ./k9s_linux_amd64.deb && sudo rm k9s_linux_amd64.deb
@@ -259,7 +259,7 @@ docker push <dockerhub_username>/<dockerhub_repo>:v1.0.1
 
 ---
 
-## 12. Install **kubectx** is a tool to switch between contexts and **kubens** is a tool to switch between Kubernetes namespaces
+## 12. Install ***kubectx*** is a tool to switch between contexts and ***kubens*** is a tool to switch between Kubernetes namespaces
 
    ```bash
    # Ubuntu 24.10
