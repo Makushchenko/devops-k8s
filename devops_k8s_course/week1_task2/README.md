@@ -13,6 +13,7 @@ This guide shows you how to:
 9. Hotfix flow
 10. Resource clean-up
 11. Install **k9s** is a terminal based UI to interact with your Kubernetes clusters
+12. Install **kubectx** is a tool to switch between contexts and **kubens** is a tool to switch between Kubernetes namespaces
 
 ---
 
@@ -254,6 +255,15 @@ docker push <dockerhub_username>/<dockerhub_repo>:v1.0.1
 
    ```bash
    sudo wget https://github.com/derailed/k9s/releases/latest/download/k9s_linux_amd64.deb && sudo apt install ./k9s_linux_amd64.deb && sudo rm k9s_linux_amd64.deb
+   ```
+
+---
+
+## 12. Install **kubectx** is a tool to switch between contexts and **kubens** is a tool to switch between Kubernetes namespaces
+
+   ```bash
+   # Ubuntu 24.10
+   sudo snap install kubectx --classic
    ```
 
 ---
